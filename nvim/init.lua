@@ -1,0 +1,4 @@
+require("logan.config.options")
+require("logan.config.keymaps")
+require("logan.lsp")
+require("logan.lazy")
