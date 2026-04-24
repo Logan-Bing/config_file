@@ -2,20 +2,26 @@ local keymap = vim.keymap.set
 
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
-keymap("n", "<leader>a", "<cmd>qa<cr>", { desc = "Quit session" }) 
+keymap("n", "<leader>a", "<cmd>qa<cr>", { desc = "Quit session" })
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 keymap("n", "<leader>x", "<cmd>lua vim.diagnostic.open_float()<CR>")
+keymap("n", "<leader>p", "<C-6>", { desc = "alterner entre deux files"})
+keymap("i", "kk", "<Esc><S-a>", {desc = "go to end of the line"})
 keymap("i","jj", "<Esc>")
+keymap("n", "<leader>k", ":move .-2<CR>==")
+keymap("n", "<leader>j", ":move .+1<CR>==")
+keymap("v", "<leader>k", ":move '<-2<CR>==")
+keymap("v", "<leader>j", ":move '>+1<CR>==")
 
 -- split
 keymap("n", "<leader>|", ":vsplit<CR>")
 keymap("n", "<leader>-", ":split<CR>")
 
 -- navigation entre fenêtres
-keymap("n", "<C-l>", "<C-w>l")
+keymap("n", "<leader>l", "<C-w>l")
 keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
-keymap("n", "<C-h>", "<C-w>h")
+keymap("n", "<leader>h", "<C-w>h")
 
 -- Tree
 keymap("n", "<leader>e","<cmd>NvimTreeOpen<CR>")
